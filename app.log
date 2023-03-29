@@ -1,0 +1,147 @@
+456  [main] INFO  c.a.security.SecurityApplicationKt -- Starting SecurityApplicationKt using Java 17.0.4.1 with PID 6692 (D:\prog\spring-security\security\build\classes\kotlin\main started by Oleksandr in D:\prog\spring-security\security)
+458  [main] INFO  c.a.security.SecurityApplicationKt -- No active profile set, falling back to 1 default profile: "default"
+1107 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -- Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+1153 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -- Finished Spring Data repository scanning in 39 ms. Found 1 JPA repository interfaces.
+1558 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -- Tomcat initialized with port(s): 8080 (http)
+1573 [main] INFO  o.a.coyote.http11.Http11NioProtocol -- Initializing ProtocolHandler ["http-nio-8080"]
+1574 [main] INFO  o.a.catalina.core.StandardService -- Starting service [Tomcat]
+1574 [main] INFO  o.a.catalina.core.StandardEngine -- Starting Servlet engine: [Apache Tomcat/10.1.5]
+1645 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -- Initializing Spring embedded WebApplicationContext
+1645 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -- Root WebApplicationContext: initialization completed in 1141 ms
+1729 [main] INFO  com.zaxxer.hikari.HikariDataSource -- HikariPool-1 - Starting...
+1883 [main] INFO  com.zaxxer.hikari.pool.HikariPool -- HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7cff3f1d
+1884 [main] INFO  com.zaxxer.hikari.HikariDataSource -- HikariPool-1 - Start completed.
+1918 [main] INFO  o.h.jpa.internal.util.LogHelper -- HHH000204: Processing PersistenceUnitInfo [name: default]
+1957 [main] INFO  org.hibernate.Version -- HHH000412: Hibernate ORM core version 6.1.7.Final
+2235 [main] INFO  SQL dialect -- HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2706 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -- HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2713 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -- Initialized JPA EntityManagerFactory for persistence unit 'default'
+3213 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -- spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+3425 [main] INFO  o.s.s.w.DefaultSecurityFilterChain -- Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7b6b99c5, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2e1c8027, org.springframework.security.web.context.SecurityContextHolderFilter@1ee52741, org.springframework.security.web.header.HeaderWriterFilter@608c7b5b, org.springframework.web.filter.CorsFilter@72d7afff, org.springframework.security.web.authentication.logout.LogoutFilter@4987142d, com.auth.security.config.JwtAuthenticationFilter@41d84abb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1640a6b5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2b76ecd5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5c41f6a0, org.springframework.security.web.session.SessionManagementFilter@20923380, org.springframework.security.web.access.ExceptionTranslationFilter@4d7f9b33, org.springframework.security.web.access.intercept.AuthorizationFilter@6ec77cab]
+3573 [main] INFO  o.a.coyote.http11.Http11NioProtocol -- Starting ProtocolHandler ["http-nio-8080"]
+3589 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -- Tomcat started on port(s): 8080 (http) with context path ''
+3596 [main] INFO  c.a.security.SecurityApplicationKt -- Started SecurityApplicationKt in 3.5 seconds (process running for 3.924)
+45431 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -- Initializing Spring DispatcherServlet 'dispatcherServlet'
+45431 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -- Initializing Servlet 'dispatcherServlet'
+45432 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -- Completed initialization in 1 ms
+45511 [http-nio-8080-exec-2] ERROR c.a.s.c.JwtAuthenticationFilter -- Expired jwt token
+45511 [http-nio-8080-exec-2] INFO  c.a.s.c.JwtAuthenticationFilter -- throw some error
+45511 [http-nio-8080-exec-2] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] -- Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Filter execution threw an exception] with root cause
+java.lang.Exception: JWT expired at 2023-03-26T13:07:08Z. Current time: 2023-03-29T09:04:01Z, a difference of 244613133 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at com.auth.security.config.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.kt:60)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+1410396 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -- Closing JPA EntityManagerFactory for persistence unit 'default'
+1410397 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource -- HikariPool-1 - Shutdown initiated...
+1410401 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource -- HikariPool-1 - Shutdown completed.
+509  [main] INFO  c.a.security.SecurityApplicationKt -- Starting SecurityApplicationKt using Java 17.0.4.1 with PID 1684 (D:\prog\spring-security\security\build\classes\kotlin\main started by Oleksandr in D:\prog\spring-security\security)
+511  [main] INFO  c.a.security.SecurityApplicationKt -- No active profile set, falling back to 1 default profile: "default"
+1125 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -- Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+1172 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -- Finished Spring Data repository scanning in 40 ms. Found 1 JPA repository interfaces.
+1581 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -- Tomcat initialized with port(s): 8080 (http)
+1589 [main] INFO  o.a.coyote.http11.Http11NioProtocol -- Initializing ProtocolHandler ["http-nio-8080"]
+1589 [main] INFO  o.a.catalina.core.StandardService -- Starting service [Tomcat]
+1589 [main] INFO  o.a.catalina.core.StandardEngine -- Starting Servlet engine: [Apache Tomcat/10.1.5]
+1661 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -- Initializing Spring embedded WebApplicationContext
+1662 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -- Root WebApplicationContext: initialization completed in 1112 ms
+1746 [main] INFO  com.zaxxer.hikari.HikariDataSource -- HikariPool-1 - Starting...
+1905 [main] INFO  com.zaxxer.hikari.pool.HikariPool -- HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7302ff13
+1907 [main] INFO  com.zaxxer.hikari.HikariDataSource -- HikariPool-1 - Start completed.
+1941 [main] INFO  o.h.jpa.internal.util.LogHelper -- HHH000204: Processing PersistenceUnitInfo [name: default]
+1981 [main] INFO  org.hibernate.Version -- HHH000412: Hibernate ORM core version 6.1.7.Final
+2246 [main] INFO  SQL dialect -- HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2726 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -- HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2733 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -- Initialized JPA EntityManagerFactory for persistence unit 'default'
+3224 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -- spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+3434 [main] INFO  o.s.s.w.DefaultSecurityFilterChain -- Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3962b216, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3183a37c, org.springframework.security.web.context.SecurityContextHolderFilter@7bbe532b, org.springframework.security.web.header.HeaderWriterFilter@3c205259, org.springframework.web.filter.CorsFilter@31a80c88, org.springframework.security.web.authentication.logout.LogoutFilter@35b79b1f, com.auth.security.config.JwtAuthenticationFilter@30811f91, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@abe7d36, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@63ccb1b2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7602c65d, org.springframework.security.web.session.SessionManagementFilter@7bd7c4cf, org.springframework.security.web.access.ExceptionTranslationFilter@3c38e2bf, org.springframework.security.web.access.intercept.AuthorizationFilter@2dd4a7a9]
+3586 [main] INFO  o.a.coyote.http11.Http11NioProtocol -- Starting ProtocolHandler ["http-nio-8080"]
+3602 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -- Tomcat started on port(s): 8080 (http) with context path ''
+3609 [main] INFO  c.a.security.SecurityApplicationKt -- Started SecurityApplicationKt in 3.477 seconds (process running for 4.315)
+645866 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -- Initializing Spring DispatcherServlet 'dispatcherServlet'
+645867 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -- Initializing Servlet 'dispatcherServlet'
+645867 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -- Completed initialization in 0 ms
+2029794 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -- Closing JPA EntityManagerFactory for persistence unit 'default'
+2029796 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource -- HikariPool-1 - Shutdown initiated...
+2029797 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource -- HikariPool-1 - Shutdown completed.
+473  [main] INFO  c.a.security.SecurityApplicationKt -- Starting SecurityApplicationKt using Java 17.0.4.1 with PID 7524 (D:\prog\spring-security\security\build\classes\kotlin\main started by Oleksandr in D:\prog\spring-security\security)
+475  [main] INFO  c.a.security.SecurityApplicationKt -- No active profile set, falling back to 1 default profile: "default"
+1105 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -- Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+1151 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -- Finished Spring Data repository scanning in 40 ms. Found 1 JPA repository interfaces.
+1560 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -- Tomcat initialized with port(s): 8080 (http)
+1568 [main] INFO  o.a.coyote.http11.Http11NioProtocol -- Initializing ProtocolHandler ["http-nio-8080"]
+1569 [main] INFO  o.a.catalina.core.StandardService -- Starting service [Tomcat]
+1569 [main] INFO  o.a.catalina.core.StandardEngine -- Starting Servlet engine: [Apache Tomcat/10.1.5]
+1638 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -- Initializing Spring embedded WebApplicationContext
+1639 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -- Root WebApplicationContext: initialization completed in 1123 ms
+1723 [main] INFO  com.zaxxer.hikari.HikariDataSource -- HikariPool-1 - Starting...
+1884 [main] INFO  com.zaxxer.hikari.pool.HikariPool -- HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4017fe2c
+1885 [main] INFO  com.zaxxer.hikari.HikariDataSource -- HikariPool-1 - Start completed.
+1920 [main] INFO  o.h.jpa.internal.util.LogHelper -- HHH000204: Processing PersistenceUnitInfo [name: default]
+1961 [main] INFO  org.hibernate.Version -- HHH000412: Hibernate ORM core version 6.1.7.Final
+2230 [main] INFO  SQL dialect -- HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2712 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -- HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2720 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -- Initialized JPA EntityManagerFactory for persistence unit 'default'
+3255 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -- spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+3481 [main] INFO  o.s.s.w.DefaultSecurityFilterChain -- Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3183a37c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@31a80c88, org.springframework.security.web.context.SecurityContextHolderFilter@3e0a112f, org.springframework.security.web.header.HeaderWriterFilter@5bc40f5d, org.springframework.web.filter.CorsFilter@7602c65d, org.springframework.security.web.authentication.logout.LogoutFilter@664083f6, com.auth.security.config.JwtAuthenticationFilter@3bf40c74, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7da1ef46, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1165a952, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5a5c2889, org.springframework.security.web.session.SessionManagementFilter@5b9df3b3, org.springframework.security.web.access.ExceptionTranslationFilter@205b73d8, org.springframework.security.web.access.intercept.AuthorizationFilter@49392256]
+3635 [main] INFO  o.a.coyote.http11.Http11NioProtocol -- Starting ProtocolHandler ["http-nio-8080"]
+3652 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -- Tomcat started on port(s): 8080 (http) with context path ''
+3659 [main] INFO  c.a.security.SecurityApplicationKt -- Started SecurityApplicationKt in 3.56 seconds (process running for 3.984)
+15824 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -- Initializing Spring DispatcherServlet 'dispatcherServlet'
+15824 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -- Initializing Servlet 'dispatcherServlet'
+15825 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -- Completed initialization in 1 ms
+515147 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -- Closing JPA EntityManagerFactory for persistence unit 'default'
+515149 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource -- HikariPool-1 - Shutdown initiated...
+515151 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource -- HikariPool-1 - Shutdown completed.
